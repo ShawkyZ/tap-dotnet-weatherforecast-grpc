@@ -1,0 +1,25 @@
+syntax = "proto3";
+
+import "google/protobuf/timestamp.proto";
+import "google/protobuf/empty.proto";
+
+option csharp_namespace = "Tanzu.WeatherForecast.Grpc";
+
+package weatherforecast;
+
+service WeatherForecast {
+  rpc Get (google.protobuf.Empty) returns (WeatherForecastReply);
+}
+
+
+message WeatherForecastReply {
+    repeated WeatherForecastModel weather_forecast_list = 1;
+}
+
+
+message WeatherForecastModel {
+    google.protobuf.Timestamp date = 1;
+    int32 temperature_c = 2;
+    int32 temperature_f = 3;
+    string summary = 4;
+}

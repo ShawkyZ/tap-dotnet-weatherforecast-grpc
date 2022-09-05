@@ -1,0 +1,23 @@
+apiVersion: carto.run/v1alpha1
+kind: Workload
+metadata:
+  name: tap-dotnet-weatherforecast-grpc
+  labels:
+    apps.tanzu.vmware.com/workload-type: web
+    apps.tanzu.vmware.com/has-tests: true
+    app.kubernetes.io/part-of: tap-dotnet-weatherforecast-grpc
+spec:
+  env:
+    - name: ASPNETCORE_ENVIRONMENT
+      value: Development
+    - name: Weather__Name
+      value: Test Weather From TAP
+  build:
+    env:
+      - name: BP_DOTNET_PROJECT_PATH
+        value: ./src
+  source:
+    git:
+      url: https://github.com/ShawkyZ/tap-dotnet-weatherforecast-grpc
+      ref:
+        branch: main

@@ -1,0 +1,14 @@
+﻿{
+  "profiles": {
+    "Tanzu.WeatherForecast.Grpc": {
+      "commandName": "Project",
+      "dotnetRunMessages": true,
+      "launchBrowser": false,
+      "applicationUrl": "http://localhost:5258;https://localhost:7177",
+      "environmentVariables": {
+        "ASPNETCORE_ENVIRONMENT": "Development",
+        "Weather__Name": "Test Weather"
+      }
+    }
+  }
+}
