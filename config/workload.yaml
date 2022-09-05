@@ -15,7 +15,7 @@ spec:
   build:
     env:
       - name: BP_DOTNET_PROJECT_PATH
-        value: ./src
+        value: ./src/Tanzu.WeatherForecast.Grpc
   source:
     git:
       url: https://github.com/ShawkyZ/tap-dotnet-weatherforecast-grpc
